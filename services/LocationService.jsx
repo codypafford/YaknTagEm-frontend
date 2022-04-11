@@ -6,7 +6,7 @@ import { REACT_NATIVE_API_URL } from "@env";
 
 class LocationService {
   async createLocation(location) {
-    return axios.post("http://73.224.86.127:5000/api/create-location", {
+    return axios.post(REACT_NATIVE_API_URL + "create-location", {
       name: location.name,
       tags: location.tags,
       difficulty: location.difficulty,
