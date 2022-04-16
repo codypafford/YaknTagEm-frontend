@@ -9,7 +9,7 @@ class LocationService {
     return axios.post(REACT_NATIVE_API_URL + "create-location", {
       name: location.name,
       tags: location.tags,
-      difficulty: location.difficulty,
+      rating: location.rating,
       latitude: location.latitude,
       longitude: location.longitude,
     });

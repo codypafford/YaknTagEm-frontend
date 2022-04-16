@@ -25,8 +25,7 @@ function ExistingLocationModal(props) {
   const [tagButtons, setTagButtons] = useState(sectionData.tagTypes);
 
   const name = props.location.name;
-  const difficulty = props.location.difficulty;
-  const comments = props.location.comments;
+  const rating = props.location.rating;
   const tags = props.location.tags;
   const locationID = props.location.id;
 
@@ -180,7 +179,7 @@ function ExistingLocationModal(props) {
                 );
               })}
               <Text style={{ textAlign: "center", fontSize: 20, margin: 10 }}>
-                Difficulty: {difficulty}
+                Rating: {rating}
               </Text>
               <Image
                 source={{

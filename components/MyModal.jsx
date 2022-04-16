@@ -21,7 +21,7 @@ function MyModal(props) {
   const [name, setName] = useState("");
   const [comments, setComments] = useState("");
   const [tags, setTags] = useState("");
-  const [difficulty, setDifficultyValue] = useState(0);
+  const [rating, setRatingValue] = useState(0);
   const [reload, setReload] = useState(false);
   const [tagButtons, setTagButtons] = useState(sectionData.tagTypes);
 
@@ -45,7 +45,7 @@ function MyModal(props) {
     let loc = {
       name,
       tags: final_tag_array,
-      difficulty,
+      rating,
       comments,
       latitude,
       longitude,
@@ -156,18 +156,18 @@ function MyModal(props) {
               onChangeText={(t) => setTags(t)}
               value={tags}
             />
-            <Text>Rate the difficulty of this location</Text>
+            <Text>Rate the rating of this location</Text>
             <Slider
               step={1}
               minimumValue={0}
               maximumValue={10}
-              value={difficulty}
-              onValueChange={(slideValue) => setDifficultyValue(slideValue)}
+              value={rating}
+              onValueChange={(slideValue) => setRatingValue(slideValue)}
               minimumTrackTintColor="#1fb28a"
               maximumTrackTintColor="#d3d3d3"
               thumbTintColor="#b9e4c9"
             />
-            <Text>Difficulty value: {difficulty}</Text>
+            <Text>Rating value: {rating}</Text>
             <ImagePickerExample></ImagePickerExample>
             <Button
               raised
